@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
  
 }
 
@@ -27,8 +27,42 @@
     position: relative;
     display: flex;
     max-width: 100vw;
+    /* border: 2px solid red; */
+    justify-content: space-between;
 
 
+}
+
+.hamburguer {
+    padding: 20px;
+}
+
+.fa-bars {
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+.contacto-header {
+    color: whitesmoke;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.redes-div {
+    padding: 25px;
+ 
+}
+
+
+#insta-header, #wa-header {
+    margin-right: 20px;
+}
+
+#insta-header, #wa-header, #mail-header {
+    font-size: 30px;
+    color: whitesmoke;
+ 
 }
 
 .box {
@@ -74,31 +108,97 @@ h1 {
 }
 
 
+.title-collections {
+    color: #4D5157;
+    margin-top: 120px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
 .collections {
-    border: red solid 2px;
     display: flex;
-    flex-wrap: nowrap;
-    margin-top: 40px;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .collection-item {
-    width: 50%;
-    border: 2px green solid;
+    /* border: 2px solid red; */
+  
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     padding: 16px;
     justify-content: center;
 }
 
+.item-anchor {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* border: 2px solid green; */
+    text-align: center;
+}
+
+
 .collection-item img {
-    width: 40%;
+    background-color: white;
+    width: 100%;
+    /* border: red solid 2px; */
+    padding: 80px 40px;
+}
+
+.collection-item img:hover {
+    transform: scale(1.10);
+    transition: all ease-in-out 250ms;
+}
+
+.item-title {
+    color: #4D5157;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.living-image {
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/images/living.jpeg");
+    margin-top: 120px;
+    /* opacity: 0.9; */
+}
+
+.image-overlay {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
 
 }
 
-.collection-title {
-    border: 2px solid yellow;
+/* .image-overlay:hover{
+    opacity: 0.3;
+} */
+
+.living-box {
+    /* border: white 2px solid; */
+    padding: 40px;
     text-align: center;
+}
+
+.living-button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+
 }
 
 
@@ -113,7 +213,7 @@ h1 {
     justify-content: center;
     padding: 50px;
     position: relative;
-    width: 80%;
+    width: 100%;
     margin: 80px auto;
     border-radius: 5px;
 }
@@ -138,7 +238,7 @@ h1 {
 }
 
 .sapi {
-    width: 85%;
+    width: 100%;
 }
 
 
@@ -244,9 +344,20 @@ h1 {
 }
 
 @media (min-width: 768px) {
+    
+    .collection-item {
+        width: 40%;
+    }
+
+    .collection-item img {
+        width: 80%;
+    }
+    
     .about-text > h2, h3, p {
         width: 70%;
     }
+
+
     
 
 }
