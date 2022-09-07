@@ -12,18 +12,17 @@
     src: url("../fonts/ash.otf");
   }
 
-  body {
-    background-color: #f3f4f3;
 
-  }
 
 
 
 .hero {
-    background-image: url("/images/dhalia.jpeg");
+    background-image: url("/images/ambar.jpg");
     background-repeat: no-repeat;
     height: 95vh;
     background-size: cover;
+    background-position: center right;
+
     position: relative;
     display: flex;
     max-width: 100vw;
@@ -62,6 +61,7 @@
 #insta-header, #wa-header, #mail-header {
     font-size: 30px;
     color: whitesmoke;
+    font-weight: 300;
  
 }
 
@@ -113,6 +113,8 @@ h1 {
     margin-top: 120px;
     margin-bottom: 70px;
     text-align: center;
+    font-weight: 400;
+    font-size: 28px;
 }
 
 .collections {
@@ -124,7 +126,7 @@ h1 {
 .collection-item {
     /* border: 2px solid red; */
   
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     padding: 16px;
@@ -140,10 +142,11 @@ h1 {
 
 
 .collection-item img {
-    background-color: white;
+    background-color: #d4cbc6;
+    box-shadow: #4D5157;
     width: 100%;
     /* border: red solid 2px; */
-    padding: 80px 40px;
+    padding: 60px 40px;
 }
 
 .collection-item img:hover {
@@ -154,6 +157,7 @@ h1 {
 .item-title {
     color: #4D5157;
     text-align: center;
+    font-weight: 400;
 }
 
 a {
@@ -191,18 +195,22 @@ a {
     text-align: center;
 }
 
+.living-title {
+    font-weight: 400;
+}
+
 .living-button {
     margin-top: 30px;
-    padding: 12px 24px;
+    padding: 12px 28px;
     background-color: transparent;
     color: whitesmoke;
     border: 1px solid whitesmoke;
     cursor: pointer;
-
 }
 
-
-
+.living-button:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
 
 
 
@@ -228,13 +236,18 @@ a {
     top: 50%;
     flex-direction: column;  
     margin-top: 40px;
-    
-  
+
+}
+
+
+.about-title, .about-subtitle {
+    font-weight: 400;
 }
 
 .image-container{
     display: flex;
     justify-content: center;
+
 }
 
 .sapi {
