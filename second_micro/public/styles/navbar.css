@@ -1,0 +1,48 @@
+.container{
+    width: 90vw;
+    border: 1px solid red;
+    margin:auto;
+}
+.topnav{
+display: flex;
+align-items: center;
+}
+.logo{
+flex-grow: 1;
+background-color: gray;
+padding:10px;
+
+}
+
+
+
+.icon{
+    background-color: black;
+    padding:10px;
+}
+
+.fa-bars{
+color:white;
+}
+
+ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+    background-color:rgb(35, 37, 35);
+
+}
+li {
+    padding:10px;
+    color:white;
+    padding:20px;
+
+}
+.navlinks{
+    display:none;
+}
+
+li:hover{
+    background-color:rgb(211, 209, 209);
+    cursor:pointer;
+}
