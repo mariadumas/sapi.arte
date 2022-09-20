@@ -2,34 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f6a9cde3da.js" crossorigin="anonymous"></script>
-    <title>sapi.arte</title>
+    <%- include("./partials/head.ejs")  %> 
 </head>
 
 <body>
+    <section class="hero"> 
+ 
+        <%- include("./partials/header.ejs")  %> 
+
+    
     <main>
-        <section class="hero">
-            <div class="hamburguer">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <!-- <h2 class="contacto-header">
-            CONTACTO
-        </h2> -->
-            <div class="redes-div">
-                <a href="https://api.whatsapp.com/send?phone=5491161520912" target="_blank"
-                    title="Enviar mensaje directo Whatsapp"><i class="fa-brands fa-whatsapp" id="wa-header"></i></a>
-                <a href="https://www.instagram.com/sapi.arte/" target="_blank"><i class="fa-brands fa-instagram"
-                        id="insta-header"></i></a>
-                <a href="mailto: hola@sapiarte.com.ar" target="_blank"><i class="fa-regular fa-envelope"
-                        id="mail-header"></i></a>
-            </div>
+       
             <div class="box">
                 <h1>sapi.arte</h1>
                 <a href="/images/catalogo.pdf"><button class="cfa">COLECCIONES</button></a>
@@ -39,13 +22,13 @@
         <section class="collections">
 
             <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/viva/dhalia.jpg" alt=""></a>
+                <a class="item-anchor" href="/viva"><img src="/images/viva/dhalia.jpg" alt=""></a>
                 <a class="title-anchor" href="">
                     <h3 class="item-title">Viva</h3>
                 </a>
             </article>
             <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/trazo/narda.jpeg" alt=""></a>
+                <a class="item-anchor" href="/trazo"><img src="/images/trazo/narda.jpg" alt=""></a>
                 <a class="title-anchor" href="">
                     <h3 class="item-title">Trazo</h3>
                 </a>
@@ -58,7 +41,7 @@
                 </a>
             </article>
             <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/papel/cosmos.jpg" alt=""></a>
+                <a class="item-anchor" href="/papel"><img src="/images/papel/cosmos.jpg" alt=""></a>
                 <a class="title-anchor" href="">
                     <h3 class="item-title">Papel</h3>
                 </a>
@@ -102,26 +85,7 @@
 
     </main>
 
-    <footer class="footer-section">
-
-        <article class="footer-item">
-
-            <p class="contacto-redes">CONTACTO</p>
-            <div class="redes">
-                <a href="https://api.whatsapp.com/send?phone=5491161520912" target="_blank"
-                    title="Enviar mensaje directo Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/sapi.arte/" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="mailto: hola@sapiarte.com.ar" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-            </div>
-
-        </article>
-        <section class="footer-copyright">
-            <p>Copyright © 2022 Osías</p>
-        </section>
-
-
-    </footer>
+<%- include("./partials/footer.ejs")  %> 
 
 
 
