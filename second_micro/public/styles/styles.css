@@ -92,9 +92,9 @@ header {
 .cont-menu ul li{
     color: whitesmoke;
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
-    padding: 10px 50px;
+    padding: 10px 30px;
     cursor: pointer;
 }
 
