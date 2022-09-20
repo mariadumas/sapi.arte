@@ -20,6 +20,7 @@
     height: 95vh;
     background-size: cover;
     background-position: center right;
+    display: flex;
     /* border: 3px solid greenyellow; */
 }
 
@@ -132,20 +133,26 @@ header {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     /* z-index: 5; */
+ 
 }
 
 h1 {
     font-family: "ash";
 }
 
+.anchor-cfa {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 .cfa {
+  
     background: transparent;
     border: 1px rgb(227, 227, 227) solid;
     color:rgb(227, 227, 227);
     cursor: pointer;
     font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 40px;
     padding: 16px 32px;
     text-align: center;
