@@ -183,11 +183,12 @@ h1 {
 
 .collection-item {
     /* border: 2px solid yellow; */
-    width: 50%;
     display: flex;
     flex-wrap: wrap;
-    padding: 16px;
     justify-content: center;
+    margin-bottom: 40px;
+    padding: 16px;
+    width: 50%;
 }
 
 .item-anchor {
@@ -423,6 +424,26 @@ a {
     text-align: left;
     width: 100%;
 }
+
+
+/* Páginas de cada colección */
+
+.title-collections-page {
+    color: #4D5157;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+
+.item-text {
+    color: #4D5157;
+    font-size: 13px;
+    text-align: center;
+}
+
 
 @media (min-width: 768px) {
 
