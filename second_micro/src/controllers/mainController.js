@@ -1,3 +1,6 @@
+const db = require("../database/models")
+
+
 const mainController =  {
     index: (req, res) => {
         res.render("index")
@@ -13,6 +16,17 @@ const mainController =  {
     },
     papel: (req, res) => {
         res.render("papel")
+    }, 
+
+    list: (req, res) => {
+
+        db.Painting.findAll()
+        .then((paintings)=>{
+
+            res.render("list", {paintings: paintings})
+        })
+
+        
     }
 
 

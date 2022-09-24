@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs")  %> 
+</head>
+<body>
+
+    <%- include("./partials/header.ejs")  %>
+    
+    <section class="collections">
+    <% paintings.forEach(painting => { %>
+        <article class="collection-item">
+            <a class="item-anchor" href=""><img src="/images/<%= painting.image %>" alt=""></a> 
+            <a class="title-anchor" href="">
+                <h3 class="item-title"><%= painting.title %> </h3>
+            </a>
+            <p class="item-text"><%= painting.size %>. <%=painting.technique%>.</p>
+            <p class="item-text"><%= painting.description %>.</p>
+        </article>
+     
+    <% }) %>        
+
+    </section>
+
+    <%- include("./partials/footer.ejs")  %> 
+    
+</body>
+</html>

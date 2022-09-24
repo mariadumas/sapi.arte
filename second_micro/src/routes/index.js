@@ -9,4 +9,6 @@ router.get("/aguas", mainController.aguas)
 router.get("/trazo", mainController.trazo)
 router.get("/papel", mainController.papel)
 
+router.get("/list", mainController.list)
+
 module.exports = router;
