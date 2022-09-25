@@ -9,13 +9,14 @@
     
     <section class="collections">
     <% paintings.forEach(painting => { %>
-        <article class="collection-item">
-            <a class="item-anchor" href=""><img src="/images/<%= painting.image %>" alt=""></a> 
-            <a class="title-anchor" href="">
-                <h3 class="item-title"><%= painting.title %> </h3>
+        <article class="collection-item">  
+            <a class="item-anchor" href="/<%= painting.id %>"><img src="/images/<%= painting.image %>" alt=""></a> 
+            <a class="title-anchor" href="/<%= painting.id %>">
+                <h3 class="item-title"><%= painting.name %> </h3>
             </a>
             <p class="item-text"><%= painting.size %>. <%=painting.technique%>.</p>
             <p class="item-text"><%= painting.description %>.</p>
+            <p class="item-text">Colección: <%= painting.collections.name %> </p>
         </article>
      
     <% }) %>        

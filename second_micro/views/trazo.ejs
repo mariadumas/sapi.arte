@@ -12,61 +12,18 @@
         <h2 class="title-collections-page">TRAZO</h2>
         <section class="collections">
 
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/trazo/ceiba.jpg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Ceiba</h3>
-                </a>
-                <p class="item-text">Medidas 90 x 110 cm. Técnica mixta. Lienzo sobre bastidor.</p>
-                <p class="item-text">Obra única.</p>
-            </article>
+            <% paintings.forEach(painting => { %>
 
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/trazo/greta.jpeg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Greta</h3>
-                </a>
-                <p class="item-text">Medidas 30 x 30 cm. Técnica mixta. Lienzo sobre bastidor.</p>
-                <p class="item-text">Obra única.</p>
-            </article>
-
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/trazo/leila.jpeg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Leila</h3>
-                </a>
-                <p class="item-text">Medidas 30 x 30 cm. Técnica mixta. Lienzo sobre bastidor.</p>
-                <p class="item-text">Obra única. Entrega inmediata.</p>
-            </article>
-
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/trazo/narda.jpg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Narda</h3>
-                </a>
-                <p class="item-text">Medidas 80 x 80 cm. Técnica mixta.</p>
-                <p class="item-text">Obra única. Entrega inmediata.</p>
-            </article>
-
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/trazo/rosa.jpeg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Rosa</h3>
-                </a>
-                <p class="item-text">Medidas 30 x 30 cm. Técnica mixta. Lienzo sobre bastidor</p>
-                <p class="item-text">Obra única.</p>
-            </article>
-
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/trazo/padma.jpeg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Padma</h3>
-                </a>
-                <p class="item-text">Medidas 80 x 80 cm. Técnica mixta.</p>
-                <p class="item-text">Obra única. Entrega inmediata.</p>
-            </article>
-
-
+                <article class="collection-item">
+                    <a class="item-anchor" href="/<%= painting.id %>"><img src="/images/<%= painting.image %>" alt=""></a>  
+                    <a class="title-anchor" href="/<%= painting.id %>">
+                        <h3 class="item-title"><%=painting.name%></h3>
+                    </a>
+                    <p class="item-text"><%=painting.size%>. <%=painting.technique%>.</p>
+                    <p class="item-text"><%=painting.description%>.</p>
+                </article>
+             
+            <% }) %>
      
 
         </section>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs")  %> 
+</head>
+<body>
+    <%- include("./partials/header.ejs")  %> 
+    
+    <h1><%= painting.name %></h1>
+    <img src="/images/<%= painting.image %>" alt=""> 
+    <p><%= painting.collections.name %> </p> 
+
+    <%- include("./partials/footer.ejs")  %> 
+</body>
+</html>

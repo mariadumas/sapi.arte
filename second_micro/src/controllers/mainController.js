@@ -3,31 +3,108 @@ const db = require("../database/models")
 
 const mainController =  {
     index: (req, res) => {
-        res.render("index")
+        res.render("index", {title: "sapi.arte"})
+    },
+    detail: (req, res) => {
+        db.Painting.findByPk(req.params.id, {
+            include: [
+            {
+                association: "collections",
+                attribute: "name"
+            }
+        ]})
+        .then((painting) => {
+            res.render("detail", {painting: painting, title: painting.name})
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+
     }, 
     viva: (req, res) => {
-        res.render("viva")
+
+        db.Painting.findAll({
+            where: {
+                collection_id: 3
+            }
+        })
+        .then((paintings)=>{
+            res.render("viva", {paintings: paintings, title: "Viva"})
+        })
+
+        .catch((error)=>{
+            console.log(error);
+        })
+
+
+       
     },
     trazo: (req, res) => {
-        res.render("trazo")
+        db.Painting.findAll({
+            where: {
+                collection_id: 1 
+            }
+        })
+        .then((paintings)=> {
+            res.render("trazo", {paintings: paintings, title: "Trazo"})
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+
     },
     aguas: (req, res) => {
-        res.render("aguas")
+        db.Painting.findAll({
+            where: {
+                collection_id: 2
+            }
+        })
+        .then((paintings)=>{
+        
+            res.render("aguas", {paintings: paintings, title: "Aguas"})
+
+        })
+
+        .catch((error)=>{
+            console.log(error);
+        })
+
     },
     papel: (req, res) => {
-        res.render("papel")
+        db.Painting.findAll({
+            where: {
+                collection_id: 4
+            }
+        })
+        .then((paintings)=>{
+            
+            res.render("papel", {paintings: paintings, title: "Papel"})
+
+        })
+
     }, 
 
     list: (req, res) => {
 
-        db.Painting.findAll()
+        db.Painting.findAll({
+            include:[{
+                association: "collections",
+                attribute: "name"
+            }
+            ]
+        })
         .then((paintings)=>{
 
-            res.render("list", {paintings: paintings})
+            res.render("list", {paintings: paintings, title: "Todos los cuadros"})
+        })
+        .catch((error)=>{
+            console.log(error);
         })
 
         
-    }
+    },
+
+
 
 
 }

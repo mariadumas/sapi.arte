@@ -11,52 +11,17 @@
 
         <h2 class="title-collections-page">VIVA</h2>
         <section class="collections">
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/viva/amelia.jpg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Amelia</h3> </a>
-                    <p class="item-text">Medidas 90 x 110 cm. Técnica mixta.</p>
-
-                    <p class="item-text">Obra única enmaracada en madera kiri.</p>
-               
-            </article>
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/viva/coral.jpeg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Coral</h3>
-                </a>
-                <p class="item-text">Medidas 90 x 90 cm. Técnica mixta.</p>
-                <p class="item-text">Obra única enmaracada en madera kiri.</p>
-            </article>
-
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/viva/dhalia.jpg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Dhalia</h3>
-                </a>
-                <p class="item-text">Medidas 150 x 150 cm. Acrílico y lápiz sobre lienzo.</p>
-                <p class="item-text">Obra única. Entrega inmediata.</p>
-            </article>
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/viva/duranta.jpg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Duranta</h3>
-                </a>
-                <p class="item-text">Medidas 90 x 120 cm. Lienzo sobre bastidor.</p>
-                <p class="item-text">Obra única. Entrega inmediata.</p>
-            </article>
-            <article class="collection-item">
-                <a class="item-anchor" href=""><img src="/images/viva/flordevida.jpg" alt=""></a>
-                <a class="title-anchor" href="">
-                    <h3 class="item-title">Flor de vida</h3>
-                </a>
-                <p class="item-text">Medidas 140 x 115 cm. Técnica mixta. Lienzo sobre bastidor</p>
-                <p class="item-text">Obra única.</p>
-            </article>
-
-
-     
-
+            <% paintings.forEach(painting => { %>
+                <article class="collection-item">
+                    <a class="item-anchor" href="/<%= painting.id %>"><img src="/images/viva/<%= painting.image %>" alt=""></a>  
+                    <a class="title-anchor" href="">
+                        <h3 class="item-title"><%= painting.name %></h3> </a>  
+                        <p class="item-text"><%= painting.size %>. <%= painting.technique %>.</p>
+    
+                        <p class="item-text"><%= painting.description %>.</p>
+                
+                </article>
+            <% }) %>
         </section>
     </main>
     
