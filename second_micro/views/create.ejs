@@ -6,43 +6,51 @@
 <body>
     <%- include("./partials/header.ejs")  %>
     
-    <h2>Crear un nuevo cuadro</h2>
+ 
 
-    <form action="/create" method="POST">
-
+    <section class="form-container">
+    <h2 class="form-title">Agregar un nuevo cuadro</h2>
+    <form action="/create" method="POST" enctype="multipart/form-data">
+        
         <label for="name">Título</label>
         <input type="text" id="name" name="name">
-
+        
         <label for="collection">Colección</label>
         <select name="collection" id="collection">
+            <option value=""selected>Seleccionar colección</option>
             <% collections.forEach(collection => { %>
                 <option value="<%= collection.id %> "><%= collection.name %> </option>
-            <% }) %>
-        </select>
-
-        <label for="price">Precio</label>
-        <input type="number" name="price" id="price">
-
-        <label for="size">Medidas</label>
-        <input type="text" name="size" id="size">
-
-        <label for="technique">Técnica</label>
-        <input type="text" name="technique" id="technique">
-
-        <label for="image">Subir una imagen</label>
-        <input type="file" name="image" id="image">
-
-        <label for="sold">¿Está vendida la obra?</label>
-        <select name="sold" id="">
-            <option value="0">Sí</option>
-            <option value="1">No</option>
-        </select>
-
-        <label for="description">Descripción</label>
-        <textarea name="description" id="description" cols="30" rows="10"></textarea>
-       
+                <% }) %>
+            </select>
+            
+            <label for="price">Precio</label>
+            <input type="number" name="price" id="price">
+            
+            <label for="size">Medidas</label>
+            <input type="text" name="size" id="size">
+            
+            <label for="technique">Técnica</label>
+            <input type="text" name="technique" id="technique">
+            
+            <label for="image">Subir una imagen</label>
+            <input type="file" name="image" id="image">
+            
+            <label for="sold">¿Está vendida la obra?</label>
+          <select name="sold" id="sold">
+            <option value="" selected>Sí/No</option>
+            <option value="">Sí</option>
+            <option value="">No</option>
+          </select>
+            
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            
+            <button type="submit" class="form-buttton">Agregar cuadro</button>
+            
+            
 
     </form>
+</section>
 
     <%- include("./partials/footer.ejs")  %> 
     

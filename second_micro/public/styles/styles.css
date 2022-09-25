@@ -445,7 +445,70 @@ a {
 }
 
 
+/* Formularios */
+
+.form-title {
+   
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-container {
+    width: 85%;
+    /* border: 3px solid salmon; */
+    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    background-color: #d4cecc;
+    border-radius: 10px;
+    color: #4D5157
+    }
+
+
+
+.form-container input, .form-container label, .form-container select, .form-container textarea {
+    width: 70%;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.form-container label {
+    margin-bottom: 3px;
+
+}
+
+
+.form-container input, .form-container select, .form-container textarea {
+    border-radius: 5px;
+    border:#d4cecc 1px solid ;
+    margin-bottom: 25px;
+    padding: 5px;
+}
+
+.form-buttton {
+    display: block;
+    margin: 25px auto;
+    padding: 10px 25px;
+    border: none;
+    background-color:#4a4a4a ;
+    color: whitesmoke;
+}
+
+.form-buttton:hover {
+    background-color: #2e2e2e;
+}
+
+
 @media (min-width: 768px) {
+
+    
 
     .cont-menu {
         width: 25%;
@@ -463,6 +526,10 @@ a {
         width: 50%;
     }
     
+    .form-container{
+        width: 70%;
+        max-width: 590px;
+    }
     
 
 
@@ -502,6 +569,11 @@ a {
 
     .image-container {
         width: 40%;
+    }
+
+    .form-container{
+        width: 50%;
+        max-width: 590px;
     }
     
 }

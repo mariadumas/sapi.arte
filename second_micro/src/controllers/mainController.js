@@ -13,11 +13,11 @@ const mainController =  {
                 attribute: "name"
             }
         ]})
-        .then((painting) => {
+        .then(function (painting) {
             res.render("detail", {painting: painting, title: painting.name})
         })
-        .catch((error) => {
-            console.log(error);
+        .catch(function (error) {
+            console.log(error)
         })
 
     }, 
@@ -103,6 +103,22 @@ const mainController =  {
 
         
     },
+
+    create: (req, res) => {
+        db.Collection.findAll()
+        .then((collections)=>{
+             res.render("create", {collections:collections, title: "Crear producto"})
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    },
+
+    save: (req, res) => {
+        db.Painting.create(
+            
+        )
+    }
 
 
 

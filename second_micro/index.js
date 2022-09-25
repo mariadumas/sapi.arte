@@ -13,10 +13,12 @@ const mainRouter = require("./src/routes/index")
 // const app = express()
 const port = 3000;
 
+app.set("view engine", "ejs");
 
 app.use(express.static("./public"));
+app.use(express.urlencoded({extended: false}));
 
-app.set("view engine", "ejs");
+
 
 
 app.use("/", mainRouter)
