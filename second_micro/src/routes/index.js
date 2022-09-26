@@ -30,9 +30,11 @@ router.get("/list", mainController.list)
 
 router.get("/create", mainController.create)
 router.post("/create", upload.single("image"), mainController.save)
+router.get("/edit/:id", mainController.edit)
+router.put("/edit/:id", upload.single("image"), mainController.update)
+router.delete("/destroy/:id", mainController.destroy)
 
+//Si no está al final salta bug. 
 router.get("/:id", mainController.detail)
-
-
 
 module.exports = router;

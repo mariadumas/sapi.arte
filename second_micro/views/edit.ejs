@@ -9,43 +9,50 @@
  
 
     <section class="form-container">
-    <h2 class="form-title">Agregar un nuevo cuadro</h2>
-    <form action="/create" method="POST" enctype="multipart/form-data">
+    <h2 class="form-title">Editar un cuadro</h2>
+    <form action="/edit/<%= painting.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
         
         <label for="name">Título</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" value="<%= painting.name %>">
         
         <label for="collection">Colección</label>
         <select name="collection" id="collection">
-            <option value=""selected>Seleccionar colección</option>
             <% collections.forEach(collection => { %>
-                <option value="<%= collection.id %> "><%= collection.name %> </option>
+            <% if (collection.id == painting.collection_id) { %>
+                <option value="<%= collection.id %> " selected><%= collection.name %> </option>
+            <% } else { %>
+                <option value="<%= collection.id %>"><%= collection.name %> </option>
+                <% } %>
+          
                 <% }) %>
             </select>
             
             <label for="price">Precio</label>
-            <input type="number" name="price" id="price">
+            <input type="number" name="price" id="price" value="<%= painting.price %>">
             
             <label for="size">Medidas</label>
-            <input type="text" name="size" id="size">
+            <input type="text" name="size" id="size" value="<%= painting.size %>">
             
             <label for="technique">Técnica</label>
-            <input type="text" name="technique" id="technique">
+            <input type="text" name="technique" id="technique" value="<%= painting.technique %>">
             
             <label for="image">Subir una imagen</label>
             <input type="file" name="image" id="image">
             
             <label for="sold">¿Está vendida la obra?</label>
           <select name="sold" id="sold">
-            <option value="" selected>Sí/No</option>
+            <% if (painting.sold) { %>
+                <option value="<%= painting.sold %>" selected></option>
+            <% } else { %>
             <option value="0">Sí</option>
             <option value="1">No</option>
+            <% } %>
           </select>
             
             <label for="description">Descripción</label>
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10"><%= painting.description %></textarea>
             
-            <button type="submit" class="form-buttton">Agregar cuadro</button>
+            <button type="submit" class="form-buttton">Editar cuadro</button>
             
             
 

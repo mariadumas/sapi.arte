@@ -1,6 +1,9 @@
 // install express with `npm install express` 
 const express = require('express')
 const app = express()
+const methodOverride =  require('method-override'); 
+//*** / 
+app.use(methodOverride('_method')); 
 
 // app.get('/', (req, res) => res.send('Hello World!'))
 
