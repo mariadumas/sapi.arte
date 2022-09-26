@@ -1,73 +1,25 @@
 const db = require("../database/models")
 
+const productController = {
 
-const mainController =  {
-    index: (req, res) => {
-        res.render("index", {title: "sapi.arte"})
-    },
-    
-    viva: (req, res) => {
-
-        db.Painting.findAll({
-            where: {
-                collection_id: 3
+    detail: (req, res) => {
+        db.Painting.findByPk(req.params.id, {
+            include: [
+            {
+                association: "collections",
+                attribute: "name"
             }
-        })
-        .then((paintings)=>{
-            res.render("viva", {paintings: paintings, title: "Viva"})
-        })
+        ]})
 
-        .catch((error)=>{
-            console.log(error);
+        .then( function (painting)  {
+            res.render("product/detail", {painting: painting, title: painting.name})
         })
-
-
-       
-    },
-    trazo: (req, res) => {
-        db.Painting.findAll({
-            where: {
-                collection_id: 1 
-            }
-        })
-        .then((paintings)=> {
-            res.render("trazo", {paintings: paintings, title: "Trazo"})
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
-
-    },
-    aguas: (req, res) => {
-        db.Painting.findAll({
-            where: {
-                collection_id: 2
-            }
-        })
-        .then((paintings)=>{
-        
-            res.render("aguas", {paintings: paintings, title: "Aguas"})
-
-        })
-
-        .catch((error)=>{
-            console.log(error);
-        })
-
-    },
-    papel: (req, res) => {
-        db.Painting.findAll({
-            where: {
-                collection_id: 4
-            }
-        })
-        .then((paintings)=>{
-            
-            res.render("papel", {paintings: paintings, title: "Papel"})
-
+        .catch( (error)=> {
+            console.log(error)
         })
 
     }, 
+
     list: (req, res) => {
 
         db.Painting.findAll({
@@ -79,7 +31,7 @@ const mainController =  {
         })
         .then(function (paintings) {
 
-            res.render("list", {paintings: paintings, title: "Todos los cuadros"})
+            res.render("product/list", {paintings: paintings, title: "Todos los cuadros"})
         })
         .catch((error)=>{
             console.log(error);
@@ -89,7 +41,7 @@ const mainController =  {
     create: (req, res) => {
         db.Collection.findAll()
         .then(function (collections) {
-             res.render("create", {collections:collections, title: "Crear producto"})
+             res.render("product/create", {collections:collections, title: "Crear producto"})
         })
         .catch((error)=>{
             console.log(error);
@@ -106,8 +58,14 @@ const mainController =  {
             sold: req.body.sold,
             description: req.body.description,
             image: req.file.filename,
-        });
-        res.redirect("/list")
+        })
+        .then(()=> {
+            res.redirect("/product/list")
+        })
+        .catch((error)=> {
+            console.log(error);
+        })
+
     },
     edit: (req, res) => {
         
@@ -117,7 +75,7 @@ const mainController =  {
         
         Promise.all([pedidoPaintings, pedidoCollections]) 
             .then(function ([painting, collections]) {
-             res.render("edit", {painting:painting, collections:collections, title: "Editar producto"})})
+             res.render("product/edit", {painting:painting, collections:collections, title: "Editar producto"})})
             
             .catch((error)=>{
             console.log(error);
@@ -144,7 +102,7 @@ const mainController =  {
             }
         })
         .then(function(){
-         res.redirect("/list")
+         res.redirect("/product/list")
         })
         
         .catch(function(error){
@@ -158,13 +116,14 @@ const mainController =  {
             }
         })
         .then(()=>{
-            res.redirect("/list")
+            res.redirect("/product/list")
         })
         .catch((error)=>{
             console.log(error);
         })
     }
 
+
 }
 
-module.exports = mainController;
+module.exports = productController;

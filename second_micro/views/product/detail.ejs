@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs")  %> 
+</head>
+<body>
+    <%- include("../partials/header.ejs")  %> 
+    
+    <h1><%= painting.name %></h1>
+    <img src="/images/<%= painting.image %>" alt=""> 
+    <p><%= painting.collections.name %> </p>
+    
+    <a href="/product/edit/<%= painting.id %> "><button type="submit">Editar</button></a>
+   
+    <form action="/product/destroy/<%= painting.id %>?_method=DELETE" method="POST">
+        
+        <button type="submit">Eliminar</button>
+    
+    </form>
+
+    <%- include("../partials/footer.ejs")  %> 
+</body>
+</html>

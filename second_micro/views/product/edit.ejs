@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("./partials/head.ejs")  %>
+    <%- include("../partials/head.ejs")  %>
 </head>
 <body>
-    <%- include("./partials/header.ejs")  %>
+    <%- include("../partials/header.ejs")  %>
     
  
 
     <section class="form-container">
     <h2 class="form-title">Editar un cuadro</h2>
-    <form action="/edit/<%= painting.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
+    <form action="/product/edit/<%= painting.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
         
         <label for="name">Título</label>
         <input type="text" id="name" name="name" value="<%= painting.name %>">
@@ -41,11 +41,13 @@
             
             <label for="sold">¿Está vendida la obra?</label>
           <select name="sold" id="sold">
-            <% if (painting.sold) { %>
-                <option value="<%= painting.sold %>" selected></option>
+            <% if (painting.sold == 1) { %>
+                <option value="1"selected>No</option>
+                <option value="0">Sí</option>
             <% } else { %>
-            <option value="0">Sí</option>
             <option value="1">No</option>
+            <option value="0" selected>Sí</option>
+
             <% } %>
           </select>
             
@@ -59,7 +61,7 @@
     </form>
 </section>
 
-    <%- include("./partials/footer.ejs")  %> 
+    <%- include("../partials/footer.ejs")  %> 
     
 </body>
 </html>

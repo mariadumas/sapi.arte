@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs")  %> 
+</head>
+<body>
+
+    <%- include("../partials/header.ejs")  %>
+    
+    <section class="collections">
+    <% users.forEach(user => { %>
+        <article class="collection-item">  
+            <a class="item-anchor" href="/user/<%= user.id %>"><img src="/images/<%= user.avatar %>" alt=""></a> 
+            <a class="title-anchor" href="/user/<%= user.id %>">
+                <h3 class="item-title"><%= user.first_name + " " %><%= user.last_name%></h3>
+            </a>
+            <p class="item-text"><%= user.email %></p>
+        </article>
+     
+    <% }) %>        
+
+    </section>
+
+    <%- include("../partials/footer.ejs")  %> 
+    
+</body>
+</html>

@@ -15,8 +15,8 @@
             <% paintings.forEach(painting => { %>
 
                 <article class="collection-item">
-                    <a class="item-anchor" href="/<%= painting.id %>"><img src="/images/<%= painting.image %>" alt=""></a>  
-                    <a class="title-anchor" href="/<%= painting.id %>">
+                    <a class="item-anchor" href="/product/<%= painting.id %>"><img src="/images/<%= painting.image %>" alt=""></a>  
+                    <a class="title-anchor" href="/product/<%= painting.id %>">
                         <h3 class="item-title"><%=painting.name%></h3>
                     </a>
                     <p class="item-text"><%=painting.size%>. <%=painting.technique%>.</p>
