@@ -10,5 +10,6 @@ router.get("/viva", mainController.viva)
 router.get("/aguas", mainController.aguas)
 router.get("/trazo", mainController.trazo)
 router.get("/papel", mainController.papel)
+router.get("/espacios", mainController.espacios)
 
 module.exports = router;

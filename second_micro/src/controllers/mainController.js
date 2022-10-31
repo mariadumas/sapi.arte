@@ -5,6 +5,10 @@ const mainController =  {
     index: (req, res) => {
         res.render("index", {title: "sapi.arte"})
     },
+
+    espacios: (req, res) => {
+        res.render("espacios-vivos", {title: "Espacios vivos"})
+    },
     
     viva: (req, res) => {
 
@@ -68,6 +72,8 @@ const mainController =  {
         })
 
     }, 
+
+ 
     list: (req, res) => {
 
         db.Painting.findAll({

@@ -5,6 +5,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let moreText2 = document.querySelector(".more-text2")
     let readLessButton = document.querySelector(".btnLess")
 
+    const iconoMenu = document.querySelector("#icono-menu");
+    const menu = document.querySelector("#menu");
+    const icono = document.querySelector("i");
+
+    // icono.addEventListener(onload, function () {
+    //     iconoMenu.style.color = "whitemsoke"
+    // })
+
+    
+
+    
+
     readmoreButton.addEventListener("click", function () {
         moreText1.style.display = "block"
         moreText2.style.display = "block"

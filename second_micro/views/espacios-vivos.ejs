@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f6a9cde3da.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/carousel.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+
+
+  <body>
+
+    <%- include("./partials/header.ejs") %>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+          aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+          aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+          aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+          aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+          aria-label="Slide 10"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+          aria-label="Slide 11"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11"
+          aria-label="Slide 12"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-image-container">
+            <img src="/images/living.jpeg" class="d-block" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img src="/images/desayuno.png" class="d-block" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img src="/images/banqueta2.png" class="d-block" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img src="/images/banqueta.png" class="d-block" alt="...">
+          </div>
+        </div>
+      <div class="carousel-item">
+        <div class="carousel-image-container">
+          <img src="/images/florero.jpeg" class="d-block" alt="...">
+        </div>
+      </div>
+    <div class="carousel-item">
+      <div class="carousel-image-container">
+        <img src="/images/gato.jpeg" class="d-block" alt="...">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-image-container">
+        <img src="/images/ventanas.jpeg" class="d-block" alt="...">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-image-container">
+        <img src="/images/sillon-ev.jpeg" class="d-block" alt="...">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-image-container">
+        <img src="/images/oficinas-ev.jpeg" class="d-block" alt="...">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-image-container">
+        <img src="/images/aguas-vivo.jpeg" class="d-block" alt="...">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-image-container">
+        <img src="/images/planta.png" class="d-block" alt="...">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-image-container">
+        <img src="/images/panoramica.jpg" class="d-block" alt="...">
+      </div>
+    </div>
+  </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
