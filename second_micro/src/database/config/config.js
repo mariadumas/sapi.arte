@@ -1,23 +1,23 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "Quellueva9!",
-    "database": "sapiarte",
-    "host": "127.0.0.1",
+    "username": "sql10530996",
+    "password": "hnUGR7VQk9",
+    "database": "sql10530996",
+    "host": "sql10.freemysqlhosting.net",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "sql10530996",
+    "password": "hnUGR7VQk9",
+    "database": "sql10530996",
+    "host": "sql10.freemysqlhosting.net",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "sql10530996",
+    "password": "hnUGR7VQk9",
+    "database": "sql10530996",
+    "host": "sql10.freemysqlhosting.net",
     "dialect": "mysql"
   }
 }

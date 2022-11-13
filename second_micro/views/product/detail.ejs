@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include("../partials/head.ejs")  %> 
+    <%- include("../partials/head.ejs") %>
 </head>
 
 <body>
-    
-    <%- include("../partials/header.ejs")  %> 
-    
-<main>
 
-    <section class="detail-container">
-    <div class="detail-image-container">   
-    <img class="image-detail" src="/images/<%= painting.image %>" alt="">
-    </div>
-    
-    <div class="detail-info">
-    <h2 class="title-detail"><%= painting.name %></h2>
-    <hr>
-    <br>
-    <h3 class="price"><%= painting.price %> </h3> 
-    <p class="detail-text"><%= painting.size %> </p>
-    <p class="detail-text"><%= painting.description %> </p>
-    <p class="detail-text"><%= painting.technique %> </p>
+    <%- include("../partials/header.ejs") %>
 
-    <div class="detail-button">
-    <button class="buy">COMPRAR</button>
-    </div>
-    </div>
-    <!-- <p><%= painting.collections.name %> </p> -->
-    
-    <!-- <a href="/product/edit/<%= painting.id %> "><button type="submit">Editar</button></a>
+        <main>
+
+            <section class="detail-container">
+                <div class="detail-image-container">
+                    <img class="image-detail" src="/images/<%= painting.image %>" alt="">
+                </div>
+
+                <div class="detail-info">
+                    <h2 class="title-detail">
+                        <%= painting.name %>
+                    </h2>
+                    <hr>
+                    <br>
+                    <h3 class="price">
+                        <%= painting.price %>
+                    </h3>
+                    <p class="detail-text">
+                        <%= painting.size %>
+                    </p>
+                    <p class="detail-text">
+                        <%= painting.description %>
+                    </p>
+                    <p class="detail-text">
+                        <%= painting.technique %>
+                    </p>
+
+                    <p class="originales">Todas las obras están firmadas, son únicas y originales. Se entregan con certificado de autenticidad con foto y firmado</p>
+
+
+                    <div class="detail-button">
+                        <button class="buy">CÓMO COMPRAR</button>
+                    </div>
+                </div>
+
+
+                <!-- <a href="/product/edit/<%= painting.id %> "><button type="submit">Editar</button></a>
    
     <form action="/product/destroy/<%= painting.id %>?_method=DELETE" method="POST">
         
         <button type="submit">Eliminar</button>
     
     </form> -->
-</section>
-</main>
+            </section>
 
-    <%- include("../partials/footer.ejs")  %> 
+        </main>
+
+        <%- include("../partials/footer.ejs") %>
 
 </body>
+
 </html>

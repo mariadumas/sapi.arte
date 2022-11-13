@@ -44,7 +44,7 @@ header {
 
 
 .fa-bars {
-    color: #4a4a4a;
+    color: #3c3c3c;
     font-size: 30px;
 }
 
@@ -63,18 +63,19 @@ header {
 
 
 .color-menu {
-    color: #6f6f6f;
-    position: fixed;
+    color: whitesmoke;
+
 }
 
 .cont-menu {
     /* background-color: #a36a65; */
     /* background-color: #c8a259; */
-    background-color: #d4cecc;
+    /* background-color: #d4cecc; */
+    background-color: rgb(106, 98, 98);
     width: 50%;
     height: 100vh;
     position: absolute;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     transition: all .2s ease;
@@ -90,10 +91,11 @@ header {
 
 }
 
-/* .opacity{
-    background-color:rgba(0,0,0,0.5);
+.opacity{
     transition: all .5s ease;
-} */
+    /* position: fixed; */
+    overflow: hidden;
+}
 
 
 
@@ -103,7 +105,7 @@ header {
 }
 
 .cont-menu ul li {
-    color: #6f6f6f;
+    color: whitesmoke;
     display: block;
     font-size: 20px;
     text-decoration: none;
@@ -127,7 +129,7 @@ header {
 #wa-header,
 #mail-header {
     font-size: 30px;
-    color: #4a4a4a;
+    color: #3c3c3c;
     font-weight: 300;
 
 }
@@ -150,9 +152,31 @@ header {
     /* z-index: 5; */
 
 }
+/* .logo-container {
+    border: 2px solid green;
+}
+
+.logo-container img {
+    width: 50%;
+    text-align: center;
+    border: 2px solid red;
+    text-align: center;
+} */
+
+.logo {
+    width: 70%;
+    /* border: 2px solid blue; */
+    align-self: center;
+}
 
 h1 {
     font-family: "ash";
+    text-align: center;
+    /* font-weight: 300; */
+}
+
+.heart {
+    text-align: center;
 }
 
 .anchor-cfa {
@@ -168,7 +192,7 @@ h1 {
     color: rgb(227, 227, 227);
     cursor: pointer;
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 16px 32px;
     text-align: center;
     transition: 250ms ease-in-out;
@@ -626,6 +650,13 @@ a {
     justify-content: center;
 }
 
+.originales {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 14px;
+    color:rgb(66, 66, 66)
+}
+
 .buy {
     background-color: rgb(43, 42, 42);
     border: none;
@@ -645,6 +676,11 @@ a {
 
 
 @media (min-width: 768px) {
+
+
+    .logo {
+        width: 50%;
+    }
 
     .cont-menu {
         width: 25%;
@@ -698,6 +734,10 @@ a {
 
 @media (min-width: 992px) {
 
+    /* .logo {
+        width: 40%;
+    } */
+
     .item-anchor {
         width: 500px;
         height: 450px;
@@ -708,7 +748,8 @@ a {
         width: 70%;
     }
     .box {
-        padding: 60px;
+        max-width: 400px;
+        /* padding: 60px; */
     }
 
     /* .about-text > h2, h3, p {
@@ -748,6 +789,13 @@ a {
 }
 
 @media (min-width: 1280px) {
+
+
+
+    .box {
+        max-width: 450px;
+        /* padding: 60px; */
+    }
 
     .collection-item img {
         width: 60%;

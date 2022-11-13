@@ -3,7 +3,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const iconoMenu = document.querySelector("#icono-menu");
   const menu = document.querySelector("#menu");
   const icono = document.querySelector("i");
-  const box = document.querySelector(".box")
+
+  const links = document.querySelectorAll("li")
+
+
 
   // icono.addEventListener("mouseover", function (e){
   //   icono.style.color = "red"
@@ -16,11 +19,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.toggle('opacity');
     // Alternar atributo SRC icono del menu
     icono.classList.toggle('color-menu');
-    // box.style.zIndex = "-1"
-
-    //  hambur.style.color="white";
 
   })
+
+links.forEach(function(link){
+  link.addEventListener('click', function (e) {
+    menu.classList.toggle('active-nav');
+    document.body.classList.toggle('opacity');
+    // Alternar atributo SRC icono del menu
+    icono.classList.toggle('color-menu');
+
+  })
+
+
+})
+
 
 
 
