@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const icono = document.querySelector("i");
 
   const links = document.querySelectorAll("li")
-
+  const hero = document.querySelector(".hero")
 
 
   // icono.addEventListener("mouseover", function (e){
@@ -16,9 +16,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
   iconoMenu.addEventListener('click', function (e) {
     // estilos para el menu y body
     menu.classList.toggle('active-nav');
+    // hero.classList.toggle("opacity")
     document.body.classList.toggle('opacity');
     // Alternar atributo SRC icono del menu
-    icono.classList.toggle('color-menu');
+  
+    icono.classList.toggle('fa-xmark');
+    // icono.classList.toggle('color-menu');
 
   })
 
@@ -27,7 +30,7 @@ links.forEach(function(link){
     menu.classList.toggle('active-nav');
     document.body.classList.toggle('opacity');
     // Alternar atributo SRC icono del menu
-    icono.classList.toggle('color-menu');
+    icono.classList.toggle('fa-xmark');
 
   })
 
