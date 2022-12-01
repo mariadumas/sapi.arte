@@ -11,5 +11,6 @@ router.get("/aguas", mainController.aguas)
 router.get("/trazo", mainController.trazo)
 router.get("/papel", mainController.papel)
 router.get("/espacios", mainController.espacios)
+router.get("/faq", mainController.faq)
 
 module.exports = router;

@@ -44,7 +44,7 @@ header {
 
 
 .fa-bars {
-    color: #3c3c3c;
+    color:#2e2e2e;
     font-size: 30px;
 }
 
@@ -137,10 +137,22 @@ header {
 #wa-header,
 #mail-header {
     font-size: 30px;
-    color: #3c3c3c;
+    color:#2e2e2e;
     font-weight: 300;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    transition: all ease-in-out 250ms;
+}
+
+
+
+#insta-header:hover,
+#wa-header:hover,
+#mail-header:hover {
+    transform: scale(1.20);
 
 }
+
+
 
 .box {
     /* background-color: rgba(0, 0, 0, 0.2); */
@@ -158,21 +170,13 @@ header {
     /* z-index: 5; */
 
 }
-/* .logo-container {
-    border: 2px solid green;
-}
 
-.logo-container img {
-    width: 50%;
-    text-align: center;
-    border: 2px solid red;
-    text-align: center;
-} */
 
 .logo {
-    width: 85%;
+    width: 119%;
     /* border: 2px solid blue; */
     align-self: center;
+    max-width: 200px;
     /* border: salmon solid 2px; */
 }
 
@@ -288,7 +292,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 15px;
-   
     padding: 30px;
     text-align: center;
     width: 65%;
@@ -526,7 +529,7 @@ a {
 .fa-whatsapp {
     font-size: 20px;
     margin-right: 30px;
-    /* margin-bottom: 30px; */
+    margin-bottom: 30px;
     cursor: pointer;
     text-decoration: none;
     color: whitesmoke;
@@ -655,10 +658,14 @@ a {
     max-width: 500px;
     /* border: 2px solid green; */
 
+
 }
+
+
 
 .title-detail {
     margin-bottom: 15px;
+    color:#2e2e2e;
 }
 
 .detail-info {
@@ -672,12 +679,6 @@ a {
 
 }
 
-.detail-button {
-
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
 
 .originales {
     margin-top: 30px;
@@ -686,8 +687,16 @@ a {
     color:rgb(66, 66, 66)
 }
 
+.buttons {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-button {
+
+}
+
+.learn-more {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -697,18 +706,18 @@ button {
     text-decoration: none;
     background: transparent;
     padding: 0;
-    font-size: inherit;
-    font-family: inherit;
+
    }
    
-   button.learn-more {
+   .learn-more {
     width: 15rem;
     height: auto;
-    margin-right: 50px;
-    margin-top: 20px;
+    margin-right: 50px; 
+    margin-top: 20px; 
+
    }
    
-   button.learn-more .circle {
+   .learn-more .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
@@ -716,10 +725,11 @@ button {
     width: 3rem;
     height: 3rem;
     background: #282936;
+    opacity: 0.8;
     border-radius: 1.625rem;
    }
    
-   button.learn-more .circle .icon, .icon.fa-whatsapp {
+   .learn-more .circle .icon {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -728,7 +738,7 @@ button {
     background: #fff;
    }
    
-   button.learn-more .circle .icon.arrow, .icon.fa-whatsapp {
+   .learn-more .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
@@ -736,7 +746,7 @@ button {
     background: none;
    }
    
-   button.learn-more .circle .icon.arrow::before {
+   .learn-more .circle .icon.arrow::before {
     position: absolute;
     content: "";
     top: -0.29rem;
@@ -748,7 +758,7 @@ button {
     transform: rotate(45deg);
    }
    
-   button.learn-more .button-text {
+   .learn-more .button-text {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -759,155 +769,85 @@ button {
     margin: 0 0 0 1.85rem;
     color: #282936;
     font-weight: 500;
+    font-size: larger;
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
    }
    
-   button:hover .circle {
+   .learn-more:hover .circle {
     width: 100%;
    }
    
-   button:hover .circle .icon.arrow, .icon.fa-whatsapp {
+   .learn-more:hover .circle .icon.arrow {
     background: #fff;
     transform: translate(1rem, 0);
    }
    
-   button:hover .button-text {
+   .learn-more:hover .button-text {
     color: #fff;
    }
 
 
-.buy {
-    background-color:whitesmoke;;
-    border: 2px solid black;
-    border-radius: 35px;
-    color: #3c3c3c;
-    margin-top: 20px;
-    padding: 15px 55px;
-    cursor: pointer;
-    max-height: 50px;
-    width: 250px;
-   
+   #wa-detail {
+    /* border: red 2px solid; */
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.500rem;
+    bottom: 0.500rem;
+    width: 1.2rem;
+    height: 0.2rem;
+    background: none;
+    color: white;
+  }
+
+  .learn-more .circle .icon#wa-detail::before {
+    position: absolute;
+    /* content: ""; */
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
 }
 
-.buy:hover {
-    background-color:white;
-    color: black;
-}
-
-
-
-
-.float-button {
+   .anchor-wa {
     text-decoration: none;
-    position: fixed;
-    padding: 10px;
-    padding-right: 15px;
-    bottom: 30px;
-    right: 30px;
-    color: #fff;
-    background-color:#25D366;
-    border-radius: 25px 30px 5px 25px;
-    z-index: 100;
-    font-size: 17px;
-    animation: whatsapp-animation 0.5s ease-in-out;
-    box-shadow: 1px 2px 5px 2px rgba(30,30,30,0.3);
-    transition:all 0.3s ease-out;
+    color: #282936
+   }
+
+
+.faq {
+
+    margin-bottom: 200px;
+    padding: 50px;
+
+
+
 }
 
-.float-button:hover {
-    background-color: #128C7E;
-    color: #fff;
+.accordion {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-#wa-detail  {
-    font-size: 20px !important;
-    padding-right: 5px;
-    padding-left: 5px;
-}
-
-@keyframes whatsapp-animation {
-    from {
-        opacity: 0%;
-    }
-
-    to {
-        opacity: 100%
-    }
-}
-
-@media screen and (max-width: 545px) {
-    span {
-        display: none;
-    }
-
-    .float-button {
-        bottom: 15px;
-        right: 15px;
-        width: 20px;
-        border-radius: 20px 20px 5px 20px;
-    }
-
-    #wa-detail {
-        font-size: 22px !important;
-        padding: 4px;
-    }
-}
-
-/* .interesa {
-    text-decoration: none;
-    color: rgb(66, 66, 66);
-} */
-
-
-/* .interesa-button {
-    background-color: transparent;
-    font-weight: semibold;
-    color: #444;
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
-    border: 2px solid #eee;
-    border-radius: .5rem;
-    cursor: pointer;
-    transition: all 1s ease;
-    box-shadow: .5rem .5rem 1rem #ccc, -.5rem -.5rem 1rem #fff
-}
-
-.interesa-button:hover {
-    box-shadow: .5rem .5rem 1rem #fff, -.5rem -.5rem 1rem #ccc
-}
-
-.interesa-button:active {
-    box-shadow: inset .2rem .2rem 1rem #fff, inset -.2rem -.2rem 2rem #ccc
-} */
-
-.interesa-button {
-    background-color: rgb(43, 42, 42);
-    border: none;
+.accordion-item {
+    /* border: 2px solid green; */
     border-radius: 35px;
-    color: whitesmoke;
-    margin-top: 20px;
-    padding: 15px 55px;
-    cursor: pointer;
-    max-height: 50px;
-    width: 250px;
-} 
-
- .interesa-button:hover {
-    background-color: black;
-    color: whitesmoke;
 }
 
 
 @media (min-width: 768px) {
 
     .hero {
-        background-image: url("/images/23.png");}
+        background-image: url("/images/23.png");
+        background-position: center left;
+    
+    }
 
 
     .logo {
-        width: 50%;
+        width: 65%;
+        max-width: 65%;
     }
 
     .cont-menu {
