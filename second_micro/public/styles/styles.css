@@ -817,22 +817,62 @@ a {
 
 .faq {
 
-    margin-bottom: 200px;
-    padding: 50px;
-
-
-
+  
+    padding-top: 50px;
+    padding-bottom: 150px;
+    background-color: #e9e2e1;
+    /* background-color: #ededed; */
 }
 
+
 .accordion {
-    width: 70%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
 
-.accordion-item {
-    /* border: 2px solid green; */
-    border-radius: 35px;
+
+
+/* .accordion-body {
+    border: 2px solid red;
+} */
+
+.subtitulo-faq {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2e2e2e;
+}
+.off {
+    width: 11%;
+    margin-left: 10px;
+}
+
+.title-tarjetas {
+    font-weight: 600;
+    margin-bottom: 2px;
+    margin-top: 30px;
+}
+
+.mcredito {
+    width: 30vw;
+    margin-bottom: 10px;
+}
+
+.img-pago {
+    margin-bottom: 30px;
+    margin-right: 7px;
+}
+
+.img-mp {
+    margin-right: 7px;
+}
+
+.img-tarjetas {
+    width: 80vw
+}
+
+.frances {
+    width: 60vw;
 }
 
 
@@ -893,6 +933,25 @@ a {
         justify-content: flex-start;
     }
 
+    .accordion {
+        width: 70%
+    }
+
+    .mcredito {
+        width: 20vw;
+    }
+
+    /* .off {
+        width: 6vw;
+    } */
+
+    .img-tarjetas {
+        width: 50vw;
+    }
+
+    .frances {
+        width: 40vw;
+    }
 
 
 
@@ -960,6 +1019,23 @@ a {
         justify-content: space-around;
     }
 
+    .mcredito {
+        width: 15vw;
+    }
+
+    .off {
+        width: 7%
+    }
+
+    .img-tarjetas {
+        width: 36vw;
+    }
+
+    .frances {
+        width: 25vw;
+    }
+
+
 }
 
 @media (min-width: 1280px) {
@@ -980,6 +1056,21 @@ a {
 
     }
 
+    .mcredito {
+        width: 10vw;
+    }
+
+    .off {
+        width: 4%;
+    }
+
+    .img-tarjetas {
+        width: 30vw;
+    }
+
+    .frances {
+        width: 15vw;
+    }
 
 
 }
