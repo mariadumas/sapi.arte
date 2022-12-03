@@ -1,29 +1,8 @@
 const db = require("../database/models")
 
-const connection = require("../dbConnection/connection");
-
-const SeriesModel = require("../mongoModels/series")
-
-const PaintingsModel = require("../mongoModels/paintings")
-
 
 const mainController =  {
 
-    // index: async (req, res) => {
-    //     try {
-
-    //         await connection()
-           
-    //         const series = await SeriesModel.find()
-    //         console.log(series);
-
-    //         res.render("index", {series: series, title: "sapi.arte"})
-    //     }
-    //     catch(error) {
-    //         console.error(error)
-    //     }
-
-    // },
 
     index: (req, res) => {
         res.render("index", {title: "sapi.arte"})
@@ -37,24 +16,9 @@ const mainController =  {
         res.render("faq", {title: "Preguntas frecuentes"})
     },
 
-    // viva: async (req,res) => {
-    //     try {
-    //         await connection()
-
-    //         const paintings = await PaintingsModel.find()
-    //         .where('serie._id').equals('63877838483c7eaee84f3dfb')
-
-    //         console.log(paintings);
-            
-    //         res.render("viva", {paintings: paintings, title: "Viva"})
-    //     }
-    //     catch(error) {
-    //         console.error(error)
-    //     }
 
 
 
-    // },
     
     viva: (req, res) => {
 
@@ -75,21 +39,7 @@ const mainController =  {
        
     },
 
-    // trazo: async (req,res) => {
-    //     try {
-    //         await connection()
 
-    //         const paintings = await PaintingsModel.find()
-    //         .where('serie._id').equals('63877809483c7eaee84f3df9')
-
-    //         console.log(paintings);
-            
-    //         res.render("trazo", {paintings: paintings, title: "Trazo"})
-    //     }
-    //     catch(error) {
-    //         console.error(error)
-    //     }
-    // },
 
 
     trazo: (req, res) => {
@@ -107,21 +57,7 @@ const mainController =  {
 
     },
 
-    // aguas: async (req,res) => {
-    //     try {
-    //         await connection()
 
-    //         const paintings = await PaintingsModel.find()
-    //         .where('serie._id').equals('63877822483c7eaee84f3dfa')
-
-    //         console.log(paintings);
-            
-    //         res.render("aguas", {paintings: paintings, title: "Aguas"})
-    //     }
-    //     catch(error) {
-    //         console.error(error)
-    //     }
-    // },
 
 
     aguas: (req, res) => {
@@ -142,21 +78,7 @@ const mainController =  {
 
     },
 
-    // papel: async (req,res) => {
-    //     try {
-    //         await connection()
 
-    //         const paintings = await PaintingsModel.find()
-    //         .where('serie._id').equals('63877858483c7eaee84f3dfc')
-
-    //         console.log(paintings);
-            
-    //         res.render("papel", {paintings: paintings, title: "Papel"})
-    //     }
-    //     catch(error) {
-    //         console.error(error)
-    //     }
-    // },
 
 
     papel: (req, res) => {
