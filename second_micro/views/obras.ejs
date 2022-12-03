@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs")  %> 
+</head>
+
+<body>
+
+    <%- include("./partials/header.ejs")  %> 
+
+    <main>
+        <h2 class="title-collections-page">OBRAS</h2>
+        <section class="collections">
+
+            <article class="collection-item">
+                <a class="item-anchor" href="/obras/viva">
+                    <div>
+                        <img src="/images/serie-viva.jpg" alt="">
+                    </div>
+                    </a>
+                <a class="title-anchor" href="/obras/viva">
+                    <h3 class="item-title">Serie "Viva"</h3>
+                </a>
+            </article>
+
+            <article class="collection-item">
+                <a class="item-anchor" href="/obras/papel">
+                    <div><img src="/images/detalle-serie-papel.jpg" alt=""></div>
+                </a>
+                <a class="title-anchor" href="/obras/papel">
+                    <h3 class="item-title">Serie "Papel"</h3>
+                </a>
+            </article>
+            
+            <article class="collection-item">
+                <a class="item-anchor" href="/obras/aguas">
+                    <div><img src="/images/agua1.jpg" alt=""></div>
+                </a>
+                <a class="title-anchor" href="/obras/aguas">
+                    <h3 class="item-title">Serie "Aguas"</h3>
+                </a>
+            </article>
+
+            <article class="collection-item">
+                <a class="item-anchor" href="/obras/trazo">
+                    <div><img src="/images/serie-trazo.jpg" alt=""></div>
+                </a>
+                <a class="title-anchor" href="/obras/trazo">
+                    <h3 class="item-title">Serie "Trazo"</h3>
+                </a>
+            </article>
+
+
+
+        </section>
+    </main>
+
+    <%- include("./partials/footer.ejs")  %> 
+</body>
+</html>

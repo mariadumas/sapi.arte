@@ -11,6 +11,10 @@
     src: url("../fonts/ash.otf");
 }
 
+html, body {
+    min-height: 100%
+  }
+  
 
 
 .hero {
@@ -488,6 +492,17 @@ a {
     display: none;
 }
 
+/* body {
+    position: relative;
+} */
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
 /* Footer */
 
 .footer-section {
@@ -499,7 +514,19 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    margin-top: 100px;
+    padding: 10px;
+    
 }
+
+/* html {
+    height: 100%;
+} */
+/* body {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 150px;
+} */
 
 
 .footer-item {
@@ -816,11 +843,12 @@ a {
 
 
 .faq {
-
-  
-    padding-top: 50px;
-    padding-bottom: 150px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    /* margin-bottom: 50px; */
     background-color: #e9e2e1;
+    /* border: 10px solid salmon; */
+
     /* background-color: #ededed; */
 }
 
@@ -953,7 +981,13 @@ a {
         width: 40vw;
     }
 
+    /* .footer-section {
+        margin-top: 250px;
+    } */
 
+    .faq {
+        margin-bottom: 100px;
+    }
 
 
 
@@ -1071,6 +1105,10 @@ a {
     .frances {
         width: 15vw;
     }
+
+
+
+
 
 
 }

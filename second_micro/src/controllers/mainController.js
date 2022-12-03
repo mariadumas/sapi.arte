@@ -8,6 +8,10 @@ const mainController =  {
         res.render("index", {title: "sapi.arte"})
     },
 
+    obras: (req, res) => {
+        res.render("obras", {title: "Obras originales"})
+    },
+
     espacios: (req, res) => {
         res.render("espacios-vivos", {title: "Espacios vivos"})
     },
