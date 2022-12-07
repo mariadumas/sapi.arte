@@ -14,6 +14,10 @@
 html, body {
     min-height: 100%
   }
+
+  main {
+    margin-bottom: 90px;
+}
   
 
 
@@ -217,6 +221,78 @@ h1 {
 }
 
 
+.obras {
+    display: flex;
+    flex-wrap: nowrap;
+
+    /* margin-bottom: 150px; */
+}
+
+.half {
+    width: 50%;
+    position: relative;
+    background-color: #d4cecc;
+    max-height: 500px;
+    /* border-top: #4a4a4a 1px solid; */
+    /* border: 10px solid rebeccapurple; */
+}
+
+
+
+
+
+.text-obra {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+
+/*     
+    border: 2px red solid; */
+}
+
+
+.title-obras-shop {
+    color:#2e2e2e;
+    font-weight: 600;
+    font-size: 10px;
+}
+.shop-now-button {
+    background: none;
+    border: 1px solid #4a4a4a;
+    color:#4a4a4a;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 4px;
+    text-align: center;
+    transition: 250ms ease-in-out;
+    margin-top: 10px;
+}
+
+.shop-now-button:hover {
+    background:#2e2e2e;
+    border: none;
+    color: white;
+}
+
+.image-obras-home {
+    width: 100%;
+    display: block;
+    /* border: red 2px solid; */
+    align-self: center;
+    
+}
+
+img {
+    /* display: block; */
+    max-width: 100%;
+}
+
+
+
+
+
+
 .title-collections {
     color: #4D5157;
     margin-top: 120px;
@@ -290,7 +366,25 @@ h1 {
 
 .item-anchor {
     /* background-color: #e3dfdf; */
+    /* background-color: #d4cecc; */
+    /* background-color: #f0eded; */
+    background-color: white;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+    /* padding: 30px; */
+    padding: 30px;
+    text-align: center;
+    width: 65%;
+  
+}
+
+.item-anchor-prints {
+    /* background-color: #e3dfdf; */
     background-color: #d4cecc;
+    /* background-color: #f0eded; */
     /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
@@ -300,6 +394,11 @@ h1 {
     text-align: center;
     width: 65%;
   
+}
+
+
+.obras-main {
+    background-color:#f6f2f2;
 }
 
 .item-anchor-sakura {
@@ -340,16 +439,22 @@ h1 {
     opacity: 1;
 }
 
+.collection-text {
+    width: 100%;
+}
+
 
 
 .title-anchor {
     width: 100%;
+  
 }
 
 .item-title {
     color: #4D5157;
     text-align: center;
     font-weight: 400;
+  
 }
 
 a {
@@ -501,7 +606,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
 }
 /* Footer */
 
@@ -514,19 +618,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    margin-top: 100px;
+    margin-top: auto;
     padding: 10px;
     
 }
 
-/* html {
-    height: 100%;
-} */
-/* body {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 150px;
-} */
+
 
 
 .footer-item {
@@ -904,6 +1001,11 @@ body {
 }
 
 
+
+  
+
+
+
 @media (min-width: 768px) {
 
     .hero {
@@ -922,11 +1024,20 @@ body {
         width: 25%;
     }
 
+    .title-obras-shop {
+        font-size: 20px;
+    }
+
+    .shop-now-button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
     .collection-item {
         width: 45%;
     }
 
-    .item-anchor {
+    .item-anchor, .item-anchor-prints {
         width: 500px;
         height: 300px;
         
@@ -999,7 +1110,7 @@ body {
         width: 40%;
     } */
 
-    .item-anchor {
+    .item-anchor, .item-anchor-prints {
         width: 500px;
         height: 450px;
         
@@ -1084,6 +1195,7 @@ body {
     .collection-item img {
         width: 60%;
     }
+
 
     .about-text {
         margin-top: 0px;

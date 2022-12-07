@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs")  %> 
+</head>
+<body>
+    <%- include("./partials/header.ejs")  %> 
+    <main class="prints-main">
+        <h2 class="title-collections-page">PRINTS</h2>
+        
+        <section class="collections">
+
+            <% prints.forEach(print => { %>
+
+                <article class="collection-item">
+                    <a class="item-anchor-prints" href="/prints/<%= print.id %>">
+                        <div>
+                            <img src="/images/prints/<%= print.img1 %>" alt="">
+                        </div>
+                        </a>  
+                    <div class="collection-text">
+                        <a class="title-anchor" href="/product/<%= print.id %>">
+                        <p class="item-title"><%=print.title%></p>
+                    </a>
+                
+                </div>
+                </article>
+             
+            <% }) %>
+     
+
+        </section>
+
+    </main>
+
+
+    <%- include("./partials/footer.ejs")  %> 
+</body>
+</html>

@@ -1,0 +1,95 @@
+.print-detail-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  /* border: 2px solid blue; */
+  /* padding: 20px; */
+  justify-content: center;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid yellow; */
+  width: 50%;
+
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 10%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+
+  .row {
+    width: 100%;
+    /* border: 2px rebeccapurple solid; */
+    align-content: center;
+    margin-left: 20px;
+  }
+
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+    width: 100%;
+    background-color: #d4cecc;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    max-width: 620px;
+
+  }
+
+  .image-div {
+    height: 500px;
+    /* border: 2px blue solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  .expanded-image {
+    /* border: 2px yellow solid; */
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px;
+
+  } 
+  
+  
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    color: transparent;
+    font-size: 35px;
+    cursor: pointer;
+  }

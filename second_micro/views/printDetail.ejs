@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <main>
+            <section class="print-detail-container">
+
+                <article class="image-section">
+                <!-- The expanding image container -->
+                <div class="container">
+
+                    <!-- Close the image -->
+                    <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+
+                    <!-- Expanded image -->
+                    <div class="image-div">
+                        <img id="expandedImg" style="width: 45%" class="expanded-image">
+                    </div>
+
+                </div>
+
+                <!-- The grid: four columns -->
+                <div class="row">
+                    <div class="column">
+                        <img src="/images/prints/buxus cuadrada in situ.png" alt="" onload="myFunction(this)" ;
+                            onclick="myFunction(this)">
+                    </div>
+                    <div class="column">
+                        <img src="/images/prints/buxus cuadrada.png" alt="" onclick="myFunction(this);">
+                    </div>
+                    <div class="column">
+                        <img src="/images/prints//buxus in situ.png" alt="" onclick="myFunction(this);">
+                    </div>
+                    <div class="column">
+                        <img src="/images/prints/buxus rectangular 01.png" alt="" onclick="myFunction(this);">
+                    </div>
+                    <div class="column">
+                        <img src="/images/prints/buxus rectangular02.png" alt="" onclick="myFunction(this);">
+                    </div>
+                </div>
+
+            </article>
+
+
+
+
+                <!-- <img class="image-detail" src="/images/prints/<%= print.img2 %>" alt="" class="img-thumbnail"> -->
+
+                <div class="detail-info">
+                    <h2 class="title-detail">
+                        <%= print.title %>
+                    </h2>
+                    <hr>
+                    <br>
+                    <h3 class="price">
+                        $5000
+                    </h3>
+                    <p class="detail-text">
+                        30 x 40
+                    </p>
+                    <p class="detail-text">
+                        Print
+                    </p>
+
+
+                    <p class="originales">Todas las obras están firmadas, son únicas y originales. Se entregan con
+                        certificado de autenticidad con foto y firmado</p>
+
+
+                    <div class="buttons">
+
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <a href="/faq"><span class="button-text">CÓMO COMPRAR</span></a>
+                        </button>
+
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <a href="https://api.whatsapp.com/send?phone=5491161520912" target="_blank"
+                                    title="Enviar mensaje directo Whatsapp"><span class="icon fab fa-whatsapp"
+                                        id="wa-detail"></span>
+                            </span>
+                            <span class="button-text">¡ME
+                                INTERESA!</span></a>
+                        </button>
+
+
+
+
+
+
+                    </div>
+                    </section>
+
+
+
+
+
+
+
+
+
+
+                    <!-- <a href="/product/edit/<%= print.id %> "><button type="submit">Editar</button></a>
+
+<form action="/product/destroy/<%= print.id %>?_method=DELETE" method="POST">
+    
+    <button type="submit">Eliminar</button>
+
+</form> -->
+
+
+
+
+
+            </section>
+
+
+
+        </main>
+
+        <%- include("./partials/footer.ejs") %>
+
+
+            <script>
+                function myFunction(imgs) {
+                    var expandImg = document.getElementById("expandedImg");
+                    expandImg.src = imgs.src;
+                    // expandImg.parentElement.style.display = "block";
+                }
+            </script>
+</body>
+
+</html>

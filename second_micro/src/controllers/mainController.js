@@ -12,6 +12,33 @@ const mainController =  {
         res.render("obras", {title: "Obras originales"})
     },
 
+    prints: (req, res) => {
+        db.Print.findAll()
+        .then((prints)=> {
+
+            res.render("prints", {prints: prints, title: "Prints"})
+
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+
+    },
+
+    printDetail: (req, res) =>{
+
+        db.Print.findByPk(req.params.id)
+        
+        .then((print)=> {
+            res.render("printDetail", {print:print, title: print.title})
+        })
+        .catch((error)=> {
+            console.log(error);
+        })
+
+    },
+
+
     espacios: (req, res) => {
         res.render("espacios-vivos", {title: "Espacios vivos"})
     },
