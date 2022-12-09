@@ -8,6 +8,9 @@
 <body>
     <%- include("./partials/header.ejs") %>
         <main>
+            
+
+
             <section class="print-detail-container">
 
                 <article class="image-section">
@@ -19,7 +22,7 @@
 
                     <!-- Expanded image -->
                     <div class="image-div">
-                        <img id="expandedImg" style="width: 45%" class="expanded-image">
+                        <img id="expandedImg"  class="expanded-image">
                     </div>
 
                 </div>
@@ -27,20 +30,23 @@
                 <!-- The grid: four columns -->
                 <div class="row">
                     <div class="column">
-                        <img src="/images/prints/buxus cuadrada in situ.png" alt="" onload="myFunction(this)" ;
-                            onclick="myFunction(this)">
+                        <img src="/images/prints/<%= print.img1 %>" alt="" onload="myFunction(this)" ;
+                            onclick="myFunction(this)">  
                     </div>
                     <div class="column">
-                        <img src="/images/prints/buxus cuadrada.png" alt="" onclick="myFunction(this);">
+                        <img src="/images/prints/<%= print.img2 %> " alt="" onclick="myFunction(this);">
                     </div>
                     <div class="column">
-                        <img src="/images/prints//buxus in situ.png" alt="" onclick="myFunction(this);">
+                        <img src="/images/prints/<%= print.img3 %> " alt="" onclick="myFunction(this);">
                     </div>
                     <div class="column">
-                        <img src="/images/prints/buxus rectangular 01.png" alt="" onclick="myFunction(this);">
+                        <img src="/images/prints/<%= print.img4 %> " alt="" onclick="myFunction(this);">
                     </div>
                     <div class="column">
-                        <img src="/images/prints/buxus rectangular02.png" alt="" onclick="myFunction(this);">
+                        <img src="/images/prints/<%= print.img5 %> " alt="" onclick="myFunction(this);">
+                    </div>
+                    <div class="column">
+                        <img src="/images/prints/<%= print.img6 %> " alt="" onclick="myFunction(this);">
                     </div>
                 </div>
 
