@@ -31,14 +31,14 @@ app.use("/product", productRoutes)
 
 
 //Para subir a Deta
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello World!');
+// });
 
 // no need for `app.listen()` on Deta, we run the app automatically.
 module.exports = app; // make sure to export your `app` instance.
 
-// app.listen(process.env.PORT || port, () => {
-//   console.log(`Example app listening on port ${port}`)
-// })
+app.listen(process.env.PORT || port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 

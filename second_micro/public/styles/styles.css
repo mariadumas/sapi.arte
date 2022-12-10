@@ -445,6 +445,7 @@ img {
 
 
 
+
 .title-anchor {
     width: 100%;
   
@@ -883,20 +884,20 @@ body {
    }
    
    .learn-more .button-text {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
     color: #282936;
-    font-weight: 500;
     font-size: larger;
+    font-weight: 500;
+    left: 0;
     line-height: 1.6;
+    margin: 0 0 0 1.85rem;
+    padding: 0.75rem 0;
+    position: absolute;
+    right: 0;
     text-align: center;
     text-transform: uppercase;
+    top: 0;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
    }
    
    .learn-more:hover .circle {
@@ -915,13 +916,13 @@ body {
 
    #wa-detail {
     /* border: red 2px solid; */
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.500rem;
-    bottom: 0.500rem;
-    width: 1.2rem;
-    height: 0.2rem;
     background: none;
+    bottom: 0.500rem;
     color: white;
+    height: 0.2rem;
+    left: 0.500rem;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    width: 1.2rem;
   }
 
   .learn-more .circle .icon#wa-detail::before {
@@ -968,8 +969,9 @@ body {
     color: #2e2e2e;
 }
 .off {
-    width: 11%;
+    color: #387422;
     margin-left: 10px;
+    font-weight: 400;
 }
 
 .title-tarjetas {

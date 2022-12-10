@@ -8,49 +8,49 @@
 <body>
     <%- include("./partials/header.ejs") %>
         <main>
-            
+
 
 
             <section class="print-detail-container">
 
                 <article class="image-section">
-                <!-- The expanding image container -->
-                <div class="container">
+                    <!-- The expanding image container -->
+                    <div class="container">
 
-                    <!-- Close the image -->
-                    <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+                        <!-- Close the image -->
+                        <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
 
-                    <!-- Expanded image -->
-                    <div class="image-div">
-                        <img id="expandedImg"  class="expanded-image">
+                        <!-- Expanded image -->
+                        <div class="image-div">
+                            <img id="expandedImg" class="expanded-image">
+                        </div>
+
                     </div>
 
-                </div>
+                    <!-- The grid: four columns -->
+                    <div class="row">
+                        <div class="column">
+                            <img src="/images/prints/<%= print.img1 %>" alt="" onload="myFunction(this)" ;
+                                onclick="myFunction(this)">
+                        </div>
+                        <div class="column">
+                            <img src="/images/prints/<%= print.img2 %> " alt="" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="/images/prints/<%= print.img3 %> " alt="" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="/images/prints/<%= print.img4 %> " alt="" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="/images/prints/<%= print.img5 %> " alt="" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="/images/prints/<%= print.img6 %> " alt="" onclick="myFunction(this);">
+                        </div>
+                    </div>
 
-                <!-- The grid: four columns -->
-                <div class="row">
-                    <div class="column">
-                        <img src="/images/prints/<%= print.img1 %>" alt="" onload="myFunction(this)" ;
-                            onclick="myFunction(this)">  
-                    </div>
-                    <div class="column">
-                        <img src="/images/prints/<%= print.img2 %> " alt="" onclick="myFunction(this);">
-                    </div>
-                    <div class="column">
-                        <img src="/images/prints/<%= print.img3 %> " alt="" onclick="myFunction(this);">
-                    </div>
-                    <div class="column">
-                        <img src="/images/prints/<%= print.img4 %> " alt="" onclick="myFunction(this);">
-                    </div>
-                    <div class="column">
-                        <img src="/images/prints/<%= print.img5 %> " alt="" onclick="myFunction(this);">
-                    </div>
-                    <div class="column">
-                        <img src="/images/prints/<%= print.img6 %> " alt="" onclick="myFunction(this);">
-                    </div>
-                </div>
-
-            </article>
+                </article>
 
 
 
@@ -62,20 +62,31 @@
                         <%= print.title %>
                     </h2>
                     <hr>
-                    <br>
-                    <h3 class="price">
-                        $5000
-                    </h3>
-                    <p class="detail-text">
-                        30 x 40
-                    </p>
-                    <p class="detail-text">
-                        Print
-                    </p>
+                
+               
+
+                    <p class="medidas">Elegí la medida:</p>
+                    <div class="prints-size">
+                        
+                        <div class="cuadrada-small bloques">30 x 30</div>
+                        <div class="cuadrada-medium bloques">50 x 50</div>
+                        <% if (print.title !=="Suculenta" && print.title !=="Tulip" ) { %>
+                            <div class="rectangular-small bloques">40 x 60</div>
+                            <div class="rectangular-medium bloques">60 x 80</div>
+                            <% } %>
+                    </div>
+
+                    <h3 class="price"></h3>
 
 
-                    <p class="originales">Todas las obras están firmadas, son únicas y originales. Se entregan con
-                        certificado de autenticidad con foto y firmado</p>
+                    <p class="originales">Edición limitada: solo 30 copias a la venta.</p>
+        
+
+                    <p class="info"> Impresión en papel fotográfico de alta calidad. Las láminas se entregan en tubos de papel o enmarcadas en color blanco, negro o madera natural. El grosor del marco es de dos centímetros. Todas las láminas están firmadas y con número de serie. </p>
+
+                    <p class="info">Consultar por otras medidas o marcos personalizados.</p>
+    
+                       
 
 
                     <div class="buttons">
@@ -103,7 +114,7 @@
 
 
                     </div>
-                    </section>
+            </section>
 
 
 
@@ -114,7 +125,7 @@
 
 
 
-                    <!-- <a href="/product/edit/<%= print.id %> "><button type="submit">Editar</button></a>
+            <!-- <a href="/product/edit/<%= print.id %> "><button type="submit">Editar</button></a>
 
 <form action="/product/destroy/<%= print.id %>?_method=DELETE" method="POST">
     
@@ -134,7 +145,7 @@
 
         <%- include("./partials/footer.ejs") %>
 
-
+            <script src="/js/prints.js"></script>
             <script>
                 function myFunction(imgs) {
                     var expandImg = document.getElementById("expandedImg");
@@ -142,6 +153,7 @@
                     // expandImg.parentElement.style.display = "block";
                 }
             </script>
+            <script src="/js/prints.js"></script>
 </body>
 
 </html>
