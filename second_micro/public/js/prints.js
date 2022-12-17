@@ -1,14 +1,12 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
-    let cuadradaSmall = document.querySelector(".cuadrada-small");
-    let cuadradaMedium = document.querySelector(".cuadrada-medium");
-    let rectangularSmall = document.querySelector(".rectangular-small");
-    let rectangularMedium = document.querySelector(".rectangular-medium");
-    let price = document.querySelector(".price")
-
-
-
-
+    
+        let cuadradaSmall = document.querySelector(".cuadrada-small");
+        let cuadradaMedium = document.querySelector(".cuadrada-medium");
+        let rectangularSmall = document.querySelector(".rectangular-small");
+        let rectangularMedium = document.querySelector(".rectangular-medium");
+        let price = document.querySelector(".price")
+ 
 
 
     cuadradaSmall.addEventListener("click", function () {
@@ -24,15 +22,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     rectangularMedium.addEventListener("click", function () {
         price.innerText = "$9000 sin marco | $16 800 con marco"
     })
-
-
-
-
-
-
-
-
-
 
 
 

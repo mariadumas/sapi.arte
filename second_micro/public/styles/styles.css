@@ -18,7 +18,13 @@ html, body {
   main {
     margin-bottom: 90px;
 }
-  
+
+.body-overlay {
+    display: none;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
+
+}
 
 
 .hero {
@@ -107,6 +113,7 @@ header {
 
 .opacity {
     transition: all .5s ease;
+    /* background-color: rgb(0, 0, 0, 0.5); */
     /* background-color: #2e2e2e; */
     opacity: 0.8;
     /* position: fixed; */
@@ -164,13 +171,13 @@ header {
 
 .box {
     /* background-color: rgba(0, 0, 0, 0.2); */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 40px;
+    /* font-size: 40px; */
     left: 50%;
-    padding: 40px;
+    /* padding: 40px; */
     position: absolute;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -238,6 +245,16 @@ h1 {
 }
 
 
+.half-imagen {
+    width: 100%;
+    position: relative;
+    background-color: #d4cecc;
+    max-height: 500px;
+    /* border-top: #4a4a4a 1px solid; */
+    /* border: 10px solid rebeccapurple; */
+}
+
+
 
 
 
@@ -283,10 +300,7 @@ h1 {
     
 }
 
-img {
-    /* display: block; */
-    max-width: 100%;
-}
+
 
 
 
@@ -403,7 +417,7 @@ img {
 
 .item-anchor-sakura {
     /* background-color: #e3dfdf; */
-    background-color: #d4cecc;
+    background-color: white;
     /* border: 2px solid green; */
     display: flex;
     flex-direction: column;

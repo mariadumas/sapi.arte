@@ -30,7 +30,7 @@
                     <!-- The grid: four columns -->
                     <div class="row">
                         <div class="column">
-                            <img src="/images/prints/<%= print.img1 %>" alt="" onload="myFunction(this)" ;
+                            <img src="/images/prints/<%= print.img1 %>" alt="" onload="myFunction(this)"
                                 onclick="myFunction(this)">
                         </div>
                         <div class="column">
@@ -62,12 +62,12 @@
                         <%= print.title %>
                     </h2>
                     <hr>
-                
-               
+
+
 
                     <p class="medidas">Elegí la medida:</p>
                     <div class="prints-size">
-                        
+
                         <div class="cuadrada-small bloques">30 x 30</div>
                         <div class="cuadrada-medium bloques">50 x 50</div>
                         <% if (print.title !=="Suculenta" && print.title !=="Tulip" ) { %>
@@ -80,13 +80,15 @@
 
 
                     <p class="originales">Edición limitada: solo 30 copias a la venta.</p>
-        
 
-                    <p class="info"> Impresión en papel fotográfico de alta calidad. Las láminas se entregan en tubos de papel o enmarcadas en color blanco, negro o madera natural. El grosor del marco es de dos centímetros. Todas las láminas están firmadas y con número de serie. </p>
+
+                    <p class="info"> Impresión en papel fotográfico de alta calidad. Las láminas se entregan en tubos de
+                        papel o enmarcadas en color blanco, negro o madera natural. El grosor del marco es de dos
+                        centímetros. Todas las láminas están firmadas y con número de serie. </p>
 
                     <p class="info">Consultar por otras medidas o marcos personalizados.</p>
-    
-                       
+
+
 
 
                     <div class="buttons">
@@ -108,20 +110,8 @@
                                 INTERESA!</span></a>
                         </button>
 
-
-
-
-
-
                     </div>
             </section>
-
-
-
-
-
-
-
 
 
 
@@ -133,27 +123,44 @@
 
 </form> -->
 
-
-
-
-
             </section>
-
 
 
         </main>
 
         <%- include("./partials/footer.ejs") %>
 
-            <script src="/js/prints.js"></script>
+            <!-- <script src="/js/prints.js"></script> -->
             <script>
                 function myFunction(imgs) {
                     var expandImg = document.getElementById("expandedImg");
                     expandImg.src = imgs.src;
                     // expandImg.parentElement.style.display = "block";
                 }
+
+                let cuadradaSmall = document.querySelector(".cuadrada-small");
+                let cuadradaMedium = document.querySelector(".cuadrada-medium");
+                let rectangularSmall = document.querySelector(".rectangular-small");
+                let rectangularMedium = document.querySelector(".rectangular-medium");
+                let price = document.querySelector(".price")
+
+
+
+                cuadradaSmall.addEventListener("click", function () {
+                    price.innerText = "$5000 sin marco | $8000 con marco"
+                })
+                cuadradaMedium.addEventListener("click", function () {
+                    price.innerText = "$8000 sin marco | $13 800 con marco"
+                })
+
+                rectangularSmall.addEventListener("click", function () {
+                    price.innerText = "$6000 sin marco | $11 000 con marco"
+                })
+                rectangularMedium.addEventListener("click", function () {
+                    price.innerText = "$9000 sin marco | $16 800 con marco"
+                })
             </script>
-            <script src="/js/prints.js"></script>
+
 </body>
 
 </html>

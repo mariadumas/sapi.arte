@@ -8,6 +8,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const hero = document.querySelector(".hero")
 
 
+
+
   // icono.addEventListener("mouseover", function (e){
   //   icono.style.color = "red"
   // })
@@ -17,7 +19,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // estilos para el menu y body
     menu.classList.toggle('active-nav');
     // hero.classList.toggle("opacity")
+
     document.body.classList.toggle('opacity');
+    
     // Alternar atributo SRC icono del menu
   
     icono.classList.toggle('fa-xmark');

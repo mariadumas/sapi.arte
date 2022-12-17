@@ -57,7 +57,9 @@ const productController = {
             technique: req.body.technique,
             sold: req.body.sold,
             description: req.body.description,
-            image: req.file.filename,
+            image: req.file.filename
+            // img2: req.file.filename,
+            // img3: req.file.filename
         })
         .then(()=> {
             res.redirect("/product/list")
@@ -94,7 +96,9 @@ const productController = {
             technique: req.body.technique,
             sold: req.body.sold,
             description: req.body.description,
-            image: req.file ? req.file.filename: imagenPainting.image
+            image: req.file ? req.file.filename: imagenPainting.image,
+            img2: req.file ? req.file.filename: imagenPainting.img2,
+            img3: req.file ? req.file.filename: imagenPainting.img3
         },
         {
             where: {
