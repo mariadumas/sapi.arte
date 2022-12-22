@@ -246,6 +246,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     height: 40vh;
+    opacity: 0.9;
     width: auto;
     align-content: center;
 
@@ -253,7 +254,7 @@ h1 {
 
 .shop-now-button-mobile {
     /* background-color: red; */
-    background: rgba(0, 0, 0, 0.38);
+    background: rgba(0, 0, 0, 0.4);
     border: none;
     color: rgb(227, 227, 227);
     cursor: pointer;
