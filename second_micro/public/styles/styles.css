@@ -228,6 +228,69 @@ h1 {
 }
 
 
+
+
+
+.home-768 {
+    display: none;
+}
+
+
+.half-mobile {
+    background-image: url("/images/obra-home2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    width: auto;
+    align-content: center;
+
+}
+
+.shop-now-button-mobile {
+    /* background-color: red; */
+    background: rgba(0, 0, 0, 0.38);
+    border: none;
+    color: rgb(227, 227, 227);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 14px;
+    text-align: center;
+    transition: 250ms ease-in-out;
+    width: 160px;
+}
+
+
+.half-mobile-laminas {
+    background-image: url("/images/prints/naida 01 cuadrada.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    width: auto;
+    align-content: center;
+
+}
+
+
+.title-collections-mobile {
+    color: #4D5157;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+
 .obras {
     display: flex;
     flex-wrap: nowrap;
@@ -247,12 +310,15 @@ h1 {
 
 .half-imagen {
     width: 100%;
-    position: relative;
     background-color: #d4cecc;
     max-height: 500px;
     /* border-top: #4a4a4a 1px solid; */
     /* border: 10px solid rebeccapurple; */
 }
+
+
+
+
 
 
 
@@ -297,6 +363,7 @@ h1 {
     display: block;
     /* border: red 2px solid; */
     align-self: center;
+    opacity: 0.9;
     
 }
 
@@ -412,8 +479,8 @@ h1 {
 
 
 .obras-main {
-    /* background-color:#f6f2f2; */
-    background-color:#4a4a4a;
+    background-color:#f6f2f2;
+    /* background-color:#4a4a4a; */
 }
 
 .item-anchor-sakura {
@@ -1048,6 +1115,14 @@ body {
     .shop-now-button {
         font-size: 16px;
         padding: 10px;
+    }
+
+    .home-mobile {
+        display: none;
+    }
+
+    .home-768 {
+        display:block
     }
 
     .collection-item {
